@@ -5,10 +5,10 @@ import '@testing-library/jest-dom'
 import { Form } from "@/components/Form"
 
 describe('<Form />', () => {
-  let handleSubmitForm = jest.fn()
+  const handleSubmitForm = jest.fn()
 
-  beforeEach(() => {
-    handleSubmitForm = jest.fn()
+  afterEach(() => {
+    jest.clearAllMocks()
   })
 
   it('should be able to render the form correctly', () => {
